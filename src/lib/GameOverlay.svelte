@@ -1,11 +1,17 @@
-import { cxStore, termStore } from '$lib/gameBridge.js';
+<script>
+  import { cxStore, termStore } from '$lib/gameBridge.js';
 
-let cx, term;
-cxStore.subscribe(v => cx = v);
-termStore.subscribe(v => term = v);
+  let cx, term;
+  cxStore.subscribe(v => cx = v);
+  termStore.subscribe(v => term = v);
 
-async function checkLevel1() {
+  async function checkLevel1() {
     if (!cx) return false;
     const exitCode = await cx.run('/bin/sh', ['-c', 'test -f /home/user/flag.txt']);
     return exitCode === 0;
-}
+  }
+</script>
+
+<div class="game-overlay">
+  <button on:click={checkLevel1}>Check Level 1</button>
+</div>
