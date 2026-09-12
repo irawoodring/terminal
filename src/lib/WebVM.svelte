@@ -381,6 +381,6 @@
 				<canvas class="w-full h-full cursor-none" id="display"></canvas>
 			</div>
 		{/if}
-        <div class="w-[900px] h-[600px] ..." id="console"></div>
+        <div class="w-[900px] h-[600px] {sideBarPinned ? 'left-[23.5rem]' : 'left-14'} right-0 p-1 scrollbar" id="console"></div>
 	</div>
 </main>
