@@ -7,7 +7,7 @@
 
   async function checkLevel1() {
     if (!cx) return false;
-    const exitCode = await cx.run('/bin/sh', ['-c', 'test -f /home/user/flag.txt']);
+    const exitCode = await cx.run("/bin/sh", ["-c", "test -f /home/user/flag.txt"]);
     return exitCode === 0;
   }
 </script>
