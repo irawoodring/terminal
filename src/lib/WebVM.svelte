@@ -321,6 +321,8 @@
 		cx.registerCallback("processCreated", handleProcessCreated);
 		term.scrollToBottom();
 		cxReadFunc = cx.setCustomConsole(writeData, term.cols, term.rows);
+        await cx.run("/bin/chown", ["-R", "user:user", "/home/user"], {uid: 0, gid: 0});
+        await cx.run("/bin/chmod", ["-R", "u+rwX", "/home/user"], {uid: 0, gid: 0});
         cxStore.set(cx);
 		const display = document.getElementById("display");
 		if(display)
