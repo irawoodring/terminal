@@ -11,6 +11,7 @@
 	import { introMessage, errorMessage, unexpectedErrorMessage } from '$lib/messages.js'
 	import { displayConfig, handleToolImpl } from '$lib/anthropic.js'
 	import { tryPlausible } from '$lib/plausible.js'
+    import { cxStore, termStore } from '$lib/gameBridge.js'
 
 	export let configObj = null;
 	export let processCallback = null;
@@ -201,6 +202,7 @@
 		window.addEventListener("resize", handleResize);
 		term.focus();
 		term.onData(readData);
+        termStore.set(term);
 		// Avoid undesired default DnD handling
 		function preventDefaults (e) {
 			e.preventDefault()
@@ -319,6 +321,7 @@
 		cx.registerCallback("processCreated", handleProcessCreated);
 		term.scrollToBottom();
 		cxReadFunc = cx.setCustomConsole(writeData, term.cols, term.rows);
+        cxStore.set(cx);
 		const display = document.getElementById("display");
 		if(display)
 		{
