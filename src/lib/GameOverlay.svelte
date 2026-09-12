@@ -13,5 +13,5 @@
 </script>
 
 <div class="game-overlay">
-  <button on:click={checkLevel1}>Check Level 1</button>
+  <button onclick={checkLevel1}>Check Level 1</button>
 </div>
