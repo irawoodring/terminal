@@ -16,3 +16,10 @@
 <div class="game-overlay">
   <button on:click={checkLevel1}>Check Level 1</button>
 </div>
+
+<style>
+    .game-overlay {
+        background-color: white;
+        color: black;
+    }
+</style>
