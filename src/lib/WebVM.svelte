@@ -373,6 +373,6 @@ async function handleTool(tool)
 <canvas class="w-full h-full cursor-none" id="display"></canvas>
 </div>
 {/if}
-<div class="w-[900px] h-[600px] left-14 right-0 p-1 scrollbar" id="console"></div>
+<div class="absolute top-0 bottom-0 left-14 right-0 p-1 scrollbar" id="console"></div>
 </div>
 </main>
