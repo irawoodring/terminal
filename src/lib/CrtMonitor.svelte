@@ -1,7 +1,7 @@
 <script>
 import {onMount, tick} from 'svelte';
 
-onMount(asyn() => {
+onMount(async() => {
     await tick();
     window.dispatchEvent(new Event('resize'));
 });
