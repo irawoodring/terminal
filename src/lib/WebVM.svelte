@@ -319,10 +319,10 @@ async function initCheerpX()
     cx.registerCallback("processCreated", handleProcessCreated);
     term.scrollToBottom();
     cxReadFunc = cx.setCustomConsole(writeData, term.cols, term.rows);
-    await cx.run("/bin/sh", ["-c",
-            "{ find /home/user -xdev -exec chown user:user {} + ; " +
-            "find /home/user -xdev -exec chmod u+rwX {} + ; } > /dev/null 2>&1"
-    ], {uid: 0, gid: 0});
+    //await cx.run("/bin/sh", ["-c",
+    //        "{ find /home/user -xdev -exec chown user:user {} + ; " +
+    //        "find /home/user -xdev -exec chmod u+rwX {} + ; } > /dev/null 2>&1"
+    //], {uid: 0, gid: 0});
     cxStore.set(cx);
     const display = document.getElementById("display");
     if(display)
