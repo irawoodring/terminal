@@ -1,5 +1,6 @@
 <script>
 import WebVM from '$lib/WebVM.svelte';
+import CrtMonitor from '$lib/CrtMonitor.svelte';
 import * as configObj from '/config_terminal';
 import { tryPlausible } from '$lib/plausible.js';
 import GameOverlay from '$lib/GameOverlay.svelte';
@@ -14,8 +15,10 @@ function handleProcessCreated(processCount)
 </script>
 
 <div class="relative">
+<CrtMonitor>
 <WebVM configObj={configObj} processCallback={handleProcessCreated} cacheId="blocks_terminal">
 	<p>Looking for a complete desktop experience? Try the new <a class="underline" href="/alpine.html" target="_blank">Alpine Linux</a> graphical WebVM</p>
 </WebVM>
+</CrtMonitor>
 <GameOverlay />
 </div>
