@@ -2,7 +2,6 @@
 import { onMount, tick } from 'svelte';
 import { get } from 'svelte/store';
 import Nav from 'labs/packages/global-navbar/src/Nav.svelte';
-import SideBar from '$lib/SideBar.svelte';
 import '$lib/global.css';
 import '@xterm/xterm/css/xterm.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
@@ -27,7 +26,6 @@ var cxReadFunc = null;
 var blockCache = null;
 var processCount = 0;
 var curVT = 0;
-var sideBarPinned = false;
 function writeData(buf, vt)
 {
     if(vt != 1)
@@ -365,25 +363,16 @@ async function handleTool(tool)
 {
     return await handleToolImpl(tool, term);
 }
-async function handleSidebarPinChange(event)
-{
-    sideBarPinned = event.detail;
-    // Make sure the pinning state of reflected in the layout
-    await tick();
-    // Adjust the layout based on the new sidebar state
-    triggerResize();
-}
 </script>
 
 <main class="relative w-full h-full">
 <div class="absolute top-10 bottom-0 left-0 right-0">
 <slot></slot>
-</SideBar>
 {#if configObj.needsDisplay}
-<div class="absolute top-0 bottom-0 {sideBarPinned ? 'left-[23.5rem]' : 'left-14'} right-0">
+<div class="absolute top-0 bottom-0 left-14 right-0">
 <canvas class="w-full h-full cursor-none" id="display"></canvas>
 </div>
 {/if}
-<div class="w-[900px] h-[600px] {sideBarPinned ? 'left-[23.5rem]' : 'left-14'} right-0 p-1 scrollbar" id="console"></div>
+<div class="w-[900px] h-[600px] left-14 right-0 p-1 scrollbar" id="console"></div>
 </div>
 </main>
