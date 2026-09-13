@@ -377,7 +377,6 @@ async function handleSidebarPinChange(event)
 
 <main class="relative w-full h-full">
 <div class="absolute top-10 bottom-0 left-0 right-0">
-<SideBar on:connect={handleConnect} on:reset={handleReset} handleTool={!configObj.needsDisplay || curVT == 7 ? handleTool : null} on:sidebarPinChange={handleSidebarPinChange}>
 <slot></slot>
 </SideBar>
 {#if configObj.needsDisplay}

@@ -3,8 +3,12 @@ import {onMount, tick} from 'svelte';
 
 onMount(async() => {
     await tick();
-    window.dispatchEvent(new Event('resize'));
-});
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        window.dispatchEvent(new Event('resize'));
+      });
+    });
+  });
 </script>
 
 <div class="crt-room">
