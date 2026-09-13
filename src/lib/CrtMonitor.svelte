@@ -1,4 +1,10 @@
 <script>
+import {onMount, tick} from 'svelte';
+
+onMount(asyn() => {
+    await tick();
+    window.dispatchEvent(new Event('resize'));
+});
 </script>
 
 <div class="crt-room">

@@ -15,7 +15,9 @@ function handleProcessCreated(processCount)
 </script>
 
 <div class="relative">
+<CrtMonitor>
 <WebVM configObj={configObj} processCallback={handleProcessCreated} cacheId="blocks_terminal">
 </WebVM>
+</CrtMonitor>
 <GameOverlay />
 </div>
