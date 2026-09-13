@@ -72,7 +72,7 @@ onMount(async() => {
 
   .crt-content {
     position: absolute;
-    inset: 0;
+    inset: 20px 24px;
     filter: brightness(1.15) contrast(1.1);
   }
 
