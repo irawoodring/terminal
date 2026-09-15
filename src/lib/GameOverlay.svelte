@@ -120,4 +120,28 @@
 
   .objective code {
     background: #f0f0f0;
-    padding:
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+  }
+
+  .check-btn {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .check-btn:hover {
+    background: #16a34a;
+  }
+
+  .feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
