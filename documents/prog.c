@@ -1,6 +1,9 @@
 #include <unistd.h>
 #include <stdio.h>
 
+// Make sure the user creates
+// a test.txt file. Can be empty
+// as long as it is there.
 int main(int argc, char** argv) {
     const char *path = "/tmp/test.txt";
 

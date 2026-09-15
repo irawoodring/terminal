@@ -29,6 +29,8 @@ rm - Remove a file or directory.  Typing 'rm notes' in a directory that holds a
 cat - Concatenates files.  Mostly we will use it to show a file's contents.  For
      instance, 'cat /home/user/notes/note_one' would print the text of a file
      called 'note_one' in the /home/user/notes directory (if there is one there).
+echo - Print a message.  If you redirect the output to a file you can create a file
+     with the text.  For instance, "echo 'Hello world.' > my_file'.
 
 These are the basic commands you will need to begin your training. They need to
 be muscle memory for you.  Use them to figure out how to progress to level 2.

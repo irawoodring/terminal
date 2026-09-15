@@ -285,6 +285,7 @@ async function initCheerpX()
     var webDevice = await CheerpX.WebDevice.create("");
     var documentsDevice = await CheerpX.WebDevice.create("documents");
     var dataDevice = await CheerpX.DataDevice.create();
+    dataDeviceStore.set(dataDevice);
     var mountPoints = [
         // The root filesystem, as an Ext2 image
     {type:"ext2", dev:overlayDevice, path:"/"},
