@@ -17,7 +17,7 @@
     if (!cx) return;
     const exitCode = await cx.run("/bin/sh", ["-c", "test -f /tmp/test.txt"]);
     console.log(exitCode);
-    feedback = exitCode === 0 ? '✅ Correct!' : '❌ Not yet — keep trying.';
+    feedback = exitCode.status === 0 ? '✅ Correct!' : '❌ Not yet — keep trying.';
   }
 
   function handleKeydown(e) {
