@@ -10,7 +10,7 @@ import { cpuActivity, diskActivity, cpuPercentage, diskLatency } from '$lib/acti
 import { introMessage, errorMessage, unexpectedErrorMessage } from '$lib/messages.js'
 import { displayConfig, handleToolImpl } from '$lib/anthropic.js'
 import { tryPlausible } from '$lib/plausible.js'
-import { cxStore, termStore } from '$lib/gameBridge.js'
+import { cxStore, termStore, dataDeviceStore } from '$lib/gameBridge.js'
 
 export let configObj = null;
 export let processCallback = null;
