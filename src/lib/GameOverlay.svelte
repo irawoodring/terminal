@@ -34,9 +34,9 @@
         <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-bold" on:click={toggleMenu}>✕</button>
       </div>
 
-      <p class="objective">Terminal is a browser based game for learning.</p>
+      <p class="objective"></p>
 
-      <button class="about-btn" on:click={() => showAbout = true}>About</button>
+      <button class="center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-bold" on:click={() => showAbout = true}>About</button>
       {#if showAbout}
         <AboutComponent on:close={() => showAbout = false } />
       {/if}
