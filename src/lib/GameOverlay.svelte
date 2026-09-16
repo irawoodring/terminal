@@ -34,15 +34,17 @@
         <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-bold" on:click={toggleMenu}>✕</button>
       </div>
 
+      <div class="flex justify-center">
       <p class="objective"></p>
 
-      <button class="center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-bold" on:click={() => showAbout = true}>About</button>
+      <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-bold" on:click={() => showAbout = true}>About</button>
       {#if showAbout}
         <AboutComponent on:close={() => showAbout = false } />
       {/if}
       {#if feedback}
         <p class="feedback">{feedback}</p>
       {/if}
+      </div>
     </div>
   </div>
 {/if}
