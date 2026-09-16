@@ -1,5 +1,6 @@
 <script>
   import { cxStore, termStore } from '$lib/gameBridge.js';
+  import { AboutComponent } from $lib/AboutComponent.js';
 
   let cx, term;
   cxStore.subscribe(v => cx = v);
@@ -11,13 +12,6 @@
   function toggleMenu() {
     menuOpen = !menuOpen;
     feedback = '';
-  }
-
-  async function checkLevel1() {
-    if (!cx) return;
-    const exitCode = await cx.run("/bin/sh", ["-c", "test -f /tmp/test.txt"]);
-    console.log(exitCode);
-    feedback = exitCode.status === 0 ? '✅ Correct!' : '❌ Not yet — keep trying.';
   }
 
   function handleKeydown(e) {
@@ -35,14 +29,16 @@
   <div class="overlay-backdrop" on:click={toggleMenu}>
     <div class="overlay-panel" on:click|stopPropagation>
       <div class="overlay-header">
-        <h2>Level 1</h2>
+        <h2>Menu</h2>
         <button class="close-btn" on:click={toggleMenu}>✕</button>
       </div>
 
-      <p class="objective">Create a file called <code>test.txt</code> in <code>/tmp</code>.</p>
+      <p class="objective">Terminal is a browser based game for learning.</p>
 
-      <button class="check-btn" on:click={checkLevel1}>Check Level 1</button>
-
+      <button class="about-btn" on:click={() = > showAbout = true}>About</button>
+      {#if showAbout}
+        <AboutComponent on:close={() => showAbout = false } />
+      {/if}
       {#if feedback}
         <p class="feedback">{feedback}</p>
       {/if}
