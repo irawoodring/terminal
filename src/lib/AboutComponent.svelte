@@ -4,7 +4,7 @@
 </script>
 
 <div class="backdrop" on:click={() => dispatch('close')}>
-  <div class="panel flex" on:click|stopPropagation>
+  <div class="panel" on:click|stopPropagation>
     <p>Terminal is a game for learning the command line (bash).  It runs on a virtual machine in your browser which runs a Linux distro. Progress is not saved, so refreshing your browser may result in loss of progress.  However, this also means if you mess something up, you can easily refresh the system to the starting state.</p>
     <p>This project runs off of <a href="https://webvm.io/">WebVM</a>.</p>
     <br />
