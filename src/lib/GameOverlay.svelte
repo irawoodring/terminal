@@ -1,6 +1,6 @@
 <script>
   import { cxStore, termStore } from '$lib/gameBridge.js';
-  import { AboutComponent } from '$lib/AboutComponent.svelte';
+  import AboutComponent from '$lib/AboutComponent.svelte';
 
   let cx, term;
   let showAbout = false;
