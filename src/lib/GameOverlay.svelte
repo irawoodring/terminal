@@ -1,6 +1,6 @@
 <script>
   import { cxStore, termStore } from '$lib/gameBridge.js';
-  import { AboutComponent } from '$lib/AboutComponent.js';
+  import { AboutComponent } from '$lib/AboutComponent.svelte';
 
   let cx, term;
   cxStore.subscribe(v => cx = v);
