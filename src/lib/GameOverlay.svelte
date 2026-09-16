@@ -35,7 +35,7 @@
 
       <p class="objective">Terminal is a browser based game for learning.</p>
 
-      <button class="about-btn" on:click={() = > showAbout = true}>About</button>
+      <button class="about-btn" on:click={() => showAbout = true}>About</button>
       {#if showAbout}
         <AboutComponent on:close={() => showAbout = false } />
       {/if}
