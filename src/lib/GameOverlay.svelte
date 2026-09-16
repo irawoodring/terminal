@@ -3,6 +3,7 @@
   import { AboutComponent } from '$lib/AboutComponent.svelte';
 
   let cx, term;
+  let showAbout = false;
   cxStore.subscribe(v => cx = v);
   termStore.subscribe(v => term = v);
 
