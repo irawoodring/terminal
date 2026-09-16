@@ -31,7 +31,7 @@
     <div class="overlay-panel" on:click|stopPropagation>
       <div class="overlay-header">
         <h2>Menu</h2>
-        <button class="close-btn" on:click={toggleMenu}>✕</button>
+        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-bold" on:click={toggleMenu}>✕</button>
       </div>
 
       <p class="objective">Terminal is a browser based game for learning.</p>
