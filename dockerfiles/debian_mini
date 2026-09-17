@@ -23,4 +23,5 @@ WORKDIR /home/user/
 # We set env, as this gets extracted by Webvm. This is optional.
 ENV HOME="/home/user" TERM="xterm" USER="user" SHELL="/bin/bash" EDITOR="vim" LANG="C.UTF-8"
 RUN echo 'root:password' | chpasswd
+RUN echo 'export PATH="/home/user/bin:$PATH"' >> /home/user/.bashrc
 CMD [ "/bin/bash" ]
