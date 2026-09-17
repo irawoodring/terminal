@@ -12,6 +12,8 @@ ls - List segments.  Shows you the files and directories in the directory
 cd - Change directory.  When you login you are at /home/user.  If you enter
      'cd examples', you would then be in /home/user/examples.  To go back up
      a directory you'd type 'cd ..'.
+pwd - Present working directory. Prints out the path of the directory you
+     are currently in.
 mkdir - Makes a new directory.  If you are at /home/user and type 'mkdir notes',
      you will now have a directory '/home/user/notes'.
 cp - Copy a file.  If the filename is 'blah', you could write a command like
@@ -33,4 +35,6 @@ echo - Print a message.  If you redirect the output to a file you can create a f
      with the text.  For instance, "echo 'Hello world.' > my_file'.
 
 These are the basic commands you will need to begin your training. They need to
-be muscle memory for you.  Use them to figure out how to progress to level 2.
+be muscle memory for you.  Use them to figure out how to progress.  You'll pick up
+other commands as you go.  Start in the level1 directory and search for hints of
+what to do next.

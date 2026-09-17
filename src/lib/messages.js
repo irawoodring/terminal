@@ -4,6 +4,9 @@ const normal = "\x1b[0m";
 export const introMessage = [
   "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
   "| There is no spoon, and the cake is a lie.                                   |",
+  "|                                                                             |",
+  "| Search through the directories to get started.  Commands like ls, cd, and   |",
+  "| cat will be helpful.                                                        |",
   "+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
   ""
 ];
