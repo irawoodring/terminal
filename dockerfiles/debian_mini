@@ -15,6 +15,7 @@ RUN apt-get -y install apt-utils gcc \
 RUN useradd -m user && echo "user:password" | chpasswd
 COPY --chown=user:user ./examples /home/user/examples
 COPY --chown=user:user ./documents /home/user/documents
+COPY --chown=user:user ./bin /home/user/.bin
 RUN chmod -R +x  /home/user/examples/lua
 RUN chown -R user:user /home/user
 # We set WORKDIR, as this gets extracted by Webvm to be used as the cwd. This is optional.
@@ -22,5 +23,5 @@ WORKDIR /home/user/
 # We set env, as this gets extracted by Webvm. This is optional.
 ENV HOME="/home/user" TERM="xterm" USER="user" SHELL="/bin/bash" EDITOR="vim" LANG="C.UTF-8"
 RUN echo 'root:password' | chpasswd
-RUN echo 'export PATH="/home/user/bin:$PATH"' >> /home/user/.bashrc
+RUN echo 'export PATH="/home/user/.bin:$PATH"' >> /home/user/.bashrc
 CMD [ "/bin/bash" ]

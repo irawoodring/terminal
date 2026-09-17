@@ -284,7 +284,6 @@ async function initCheerpX()
     var overlayDevice = await CheerpX.OverlayDevice.create(blockDevice, blockCache);
     var webDevice = await CheerpX.WebDevice.create("");
     var documentsDevice = await CheerpX.WebDevice.create("documents");
-    var binDevice = await CheerpX.WebDevice.create("bin");
     var dataDevice = await CheerpX.DataDevice.create();
     dataDeviceStore.set(dataDevice);
     var mountPoints = [
@@ -303,8 +302,7 @@ async function initCheerpX()
     // The Linux 'sysfs' filesystem which is used to enumerate emulated devices
     {type:"sys", path:"/sys"},
     // Convenient access to sample documents in the user directory
-    {type:"dir", dev:documentsDevice, path:"/home/user/documents"},
-    {type:"dir", dev:binDevice, path:"/home/user/bin"}
+    {type:"dir", dev:documentsDevice, path:"/home/user/documents"}
     ];
     try
     {
